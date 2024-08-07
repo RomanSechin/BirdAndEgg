@@ -11,10 +11,9 @@ namespace BirdAndEgg
     public override Egg[] LayEggs(int numberOfEggs)
     {
       Egg[] eggs = new Egg[numberOfEggs];
-      Random random = new Random();
       for (int i = 0; i < numberOfEggs; ++i)
       {
-        eggs[i] = new Egg(12.0 + random.NextDouble(), "speckled");
+        eggs[i] = new Egg(12.0 + Bird.Randomizer.NextDouble(), "speckled");
       }
       return eggs;
     }
