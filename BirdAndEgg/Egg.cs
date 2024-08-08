@@ -15,7 +15,7 @@ namespace BirdAndEgg
       Size = size;
       Color = color;
     }
-    public string Description {
+    public virtual string Description {
       get { return $"A {Size:0.0}cm {Color} egg"; }
     }
   }

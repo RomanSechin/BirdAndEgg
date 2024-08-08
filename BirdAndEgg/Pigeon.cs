@@ -8,14 +8,21 @@ namespace BirdAndEgg
 {
   internal class Pigeon : Bird
   {
-    public override Egg[] LayEggs(int numberOfEggs) {
+    public override Egg[] LayEggs(int numberOfEggs) 
+    {            
       Egg[] eggs = new Egg[numberOfEggs];
       for (int i = 0; i < numberOfEggs; ++i)
       {
-        eggs[i] = new Egg(1.0 + 2 * Bird.Randomizer.NextDouble(), "White");
+        if (Bird.Randomizer.Next(4) == 0)
+        {
+            eggs[i] = new BrokenEgg(Bird.Randomizer.NextDouble() * 2 + 1, "white");
+        }
+        else
+        {
+            eggs[i] = new Egg(Bird.Randomizer.NextDouble() * 2 + 1, "white");
+        }
       }
       return eggs;
     }
-
   }
 }
