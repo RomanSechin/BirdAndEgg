@@ -15,7 +15,7 @@ namespace BirdAndEgg
       {
         if (Bird.Randomizer.Next(4) == 0)
         {
-            eggs[i] = new BrokenEgg(Bird.Randomizer.NextDouble() * 2 + 1, "white");
+            eggs[i] = new BrokenEgg("white");
         }
         else
         {

@@ -8,11 +8,11 @@ namespace BirdAndEgg
 {
     internal class BrokenEgg : Egg
     {
-        public BrokenEgg(double size, string color) : base(size, color){
+        public BrokenEgg(string color) : base(0, color){
             
         }
         public override string Description {
-            get { return "A bird laid a broken egg"; }
+            get { return $"A bird laid a {Color} broken egg"; }
         }
     }
 }
